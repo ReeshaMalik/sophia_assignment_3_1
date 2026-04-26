@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Fitness Studio - Membership</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html"><img src="logo.png" alt="ABC Fitness Studio Logo" class="logo"></a>
+            <h1 class="site-title">ABC Fitness Studio</h1>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close navigation">&#10005;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <h2 class="page-title">Membership Options</h2>
+
+        <div class="membership-grid">
+            <section class="membership-card">
+                <img src="Client2_IndividualKickboxing.png" alt="Kickboxing Membership">
+                <h3>Basic</h3>
+                <ul>
+                    <li>Access to all group classes</li>
+                    <li>Kickboxing sessions included</li>
+                    <li>Locker room access</li>
+                    <li>1 guest pass per month</li>
+                </ul>
+                <button class="btn-primary">Join Now</button>
+            </section>
+
+            <section class="membership-card">
+                <img src="Client2_IndividualYoga.png" alt="Yoga Plus Membership">
+                <h3>Yoga Plus</h3>
+                <ul>
+                    <li>All Basic benefits</li>
+                    <li>Unlimited yoga classes</li>
+                    <li>1 individual session per month</li>
+                    <li>Priority class booking</li>
+                </ul>
+                <button class="btn-primary">Join Now</button>
+            </section>
+
+            <section class="membership-card">
+                <img src="Client2_IndividualPilates.png" alt="All Access Membership">
+                <h3>All Access</h3>
+                <ul>
+                    <li>All Yoga Plus benefits</li>
+                    <li>Unlimited pilates classes</li>
+                    <li>4 individual sessions per month</li>
+                    <li>Free studio merchandise</li>
+                </ul>
+                <button class="btn-primary">Join Now</button>
+            </section>
+        </div>
+
+        <section class="content-section">
+            <h2>Studio Merchandise</h2>
+            <p>Show your ABC Fitness Studio pride with our branded gear.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Client2_TeeShirt.png" alt="ABC Fitness Studio T-Shirt">
+                    <p>Studio T-Shirt</p>
+                </div>
+                <div class="card">
+                    <img src="Client2_WaterBottle.png" alt="ABC Fitness Studio Water Bottle">
+                    <p>Studio Water Bottle</p>
+                </div>
+                <div class="card">
+                    <img src="Client2_YogaMat.png" alt="ABC Fitness Studio Yoga Mat">
+                    <p>Studio Yoga Mat</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>Can I try a class before joining?</h4>
+                <p>Yes! We offer a free trial class for all new visitors. Contact us to book your spot.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Are there contracts?</h4>
+                <p>No long-term contracts. All memberships are month-to-month and can be cancelled anytime.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you offer family memberships?</h4>
+                <p>Yes, family plans are available. Please contact us directly for pricing and details.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-subscribe">
+            <label for="subscribe-email">Subscribe to our newsletter:</label>
+            <input type="email" id="subscribe-email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="membership.html">Membership</a></li>
+            </ul>
+        </nav>
+        <div class="footer-bottom">
+            <div class="footer-hours">
+                <span>Mon-Fri 6am-9pm</span>
+                <span>Sat 9am-6pm</span>
+                <span>Sun Closed</span>
+            </div>
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger navigation
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.add('open');
+        });
+        document.getElementById('navClose').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.remove('open');
+        });
+
+        // Subscribe button alert
+        document.querySelector('.footer-subscribe button').addEventListener('click', function () {
+            alert('Thank you for subscribing.');
+        });
+    </script>
+
+</body>
+</html>

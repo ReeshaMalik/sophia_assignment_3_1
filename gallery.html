@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Fitness Studio - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html"><img src="logo.png" alt="ABC Fitness Studio Logo" class="logo"></a>
+            <h1 class="site-title">ABC Fitness Studio</h1>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+            <nav class="main-nav" id="mainNav">
+                <button class="nav-close" id="navClose" aria-label="Close navigation">&#10005;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <h2 class="page-title">Gallery &amp; Shop</h2>
+
+        <button class="btn-primary view-cart-btn" id="viewCartBtn">&#128722; View Cart</button>
+
+        <table class="gallery-table">
+            <tr>
+                <td>
+                    <img src="Client2_GroupYoga.png" alt="Group Yoga Class">
+                    <p><strong>Group Yoga</strong></p>
+                    <p>Guided group yoga for all levels.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client2_GroupKickboxing.png" alt="Group Kickboxing Class">
+                    <p><strong>Group Kickboxing</strong></p>
+                    <p>High-energy group kickboxing sessions.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client2_GroupPilates.png" alt="Group Pilates Class">
+                    <p><strong>Group Pilates</strong></p>
+                    <p>Core-strengthening group pilates.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Client2_IndividualYoga.png" alt="Individual Yoga Session">
+                    <p><strong>Individual Yoga</strong></p>
+                    <p>One-on-one yoga tailored to you.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client2_IndividualKickboxing.png" alt="Individual Kickboxing Session">
+                    <p><strong>Individual Kickboxing</strong></p>
+                    <p>Personal kickboxing training.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client2_IndividualPilates.png" alt="Individual Pilates Session">
+                    <p><strong>Individual Pilates</strong></p>
+                    <p>Personalised pilates sessions.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="Client2_TeeShirt.png" alt="ABC Fitness Studio T-Shirt">
+                    <p><strong>Studio T-Shirt</strong></p>
+                    <p>Official ABC Fitness Studio tee.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client2_WaterBottle.png" alt="ABC Fitness Studio Water Bottle">
+                    <p><strong>Water Bottle</strong></p>
+                    <p>Stay hydrated with our branded bottle.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="Client2_YogaMat.png" alt="ABC Fitness Studio Yoga Mat">
+                    <p><strong>Yoga Mat</strong></p>
+                    <p>Premium non-slip studio yoga mat.</p>
+                    <button class="btn-primary">Add to Cart</button>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Shopping Cart Modal -->
+        <div id="cartModal" class="modal-overlay" style="display:none;">
+            <div class="modal-box">
+                <button class="modal-close" id="modalClose">&#10005;</button>
+                <h3>Your Cart</h3>
+                <ul id="cartItems"></ul>
+                <div class="modal-actions">
+                    <button class="btn-primary" id="processOrderBtn">Process Order</button>
+                    <button class="btn-secondary" id="clearCartBtn">Clear Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-subscribe">
+            <label for="subscribe-email">Subscribe to our newsletter:</label>
+            <input type="email" id="subscribe-email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="membership.html">Membership</a></li>
+            </ul>
+        </nav>
+        <div class="footer-bottom">
+            <div class="footer-hours">
+                <span>Mon-Fri 6am-9pm</span>
+                <span>Sat 9am-6pm</span>
+                <span>Sun Closed</span>
+            </div>
+            <div class="footer-social">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger navigation
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.add('open');
+        });
+        document.getElementById('navClose').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.remove('open');
+        });
+
+        // Subscribe button alert
+        document.querySelector('.footer-subscribe button').addEventListener('click', function () {
+            alert('Thank you for subscribing.');
+        });
+
+        // Add to Cart alerts — all 9 buttons
+        document.querySelectorAll('.gallery-table .btn-primary').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                alert('Item added to the cart.');
+            });
+        });
+
+        // View Cart — open modal
+        document.getElementById('viewCartBtn').addEventListener('click', function () {
+            document.getElementById('cartModal').style.display = 'flex';
+        });
+
+        // Close modal (X button)
+        document.getElementById('modalClose').addEventListener('click', function () {
+            document.getElementById('cartModal').style.display = 'none';
+        });
+
+        // Clear Cart alert
+        document.getElementById('clearCartBtn').addEventListener('click', function () {
+            alert('Cart cleared.');
+            document.getElementById('cartModal').style.display = 'none';
+        });
+
+        // Process Order alert
+        document.getElementById('processOrderBtn').addEventListener('click', function () {
+            alert('Thank you for your order.');
+            document.getElementById('cartModal').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
